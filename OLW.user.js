@@ -88,13 +88,13 @@ var style = ["<style>" +
 "       color: " + black +
 "       bottom: 50px;" + 
 "       position: absolute;" + 
-"       right: 5px !important;" + 
+"       right: 25px !important;" + 
 "   }" + 
 "" + 
 /*** Zmiana szerokości pola od wyszukiwarki: ***/
 "   input[name='nsQ'] {" + 
 "       position: absolute;" + 
-"       width: 133% !important;" + 
+"       width: 130% !important;" + 
 "   }" + 
 "" + 
 /*** Zmiana koloru mojego dodatku: ***/
