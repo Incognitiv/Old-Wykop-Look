@@ -2,7 +2,7 @@
 // @name            Old Look Wykop
 // @description     Skrypt przywraca stary wygląd portalu Wykop.pl z lat 2007-2008.
 // @author          Patryk "Linux__Shines" N.
-// @version         0.0.1.0
+// @version         0.0.1.1
 // @include         http://www.wykop.pl/*
 // @include         https://www.wykop.pl/*
 // @updateURL       https://openuserjs.org/install/The_Shiny/Wykop_-_Fullscreen_Mikro.user.js
@@ -34,11 +34,6 @@ var background  = "http://i.imgur.com/Y9zPxy7.png";
 var logo_normal = "http://i.imgur.com/Tyinjgx.png";
 var logo_hover  = "http://i.imgur.com/RhpC99v.png";
 var digg_button = "http://i.imgur.com/L6avdgg.png";
-
-// Do testu:
-// ul.clearfix {
-	// margin-right: piksele;
-// }
 
 /*** Styl: ***/
 var style = ["<style>" +
