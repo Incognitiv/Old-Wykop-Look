@@ -2,7 +2,7 @@
 // @name            Old Look Wykop
 // @description     Skrypt przywraca stary wygląd portalu Wykop.pl z lat 2007-2008.
 // @author          Patryk "Linux__Shines" N.
-// @version         0.0.0.7
+// @version         0.0.1.0
 // @include         http://www.wykop.pl/*
 // @include         https://www.wykop.pl/*
 // @updateURL       https://openuserjs.org/install/The_Shiny/Wykop_-_Fullscreen_Mikro.user.js
@@ -35,6 +35,11 @@ var logo_normal = "http://i.imgur.com/Tyinjgx.png";
 var logo_hover  = "http://i.imgur.com/RhpC99v.png";
 var digg_button = "http://i.imgur.com/L6avdgg.png";
 
+// Do testu:
+// ul.clearfix {
+	// margin-right: piksele;
+// }
+
 /*** Styl: ***/
 var style = ["<style>" +
 /*** Kolorowanie całego tła wykopu na kolor biały: ***/
@@ -56,7 +61,9 @@ var style = ["<style>" +
 /*** Zamiana koloru liter paska nawigacyjnego na jasnoniebieski po najechaniu a także przy aktywnym przycisku na pasku nawigacyjnym, z wyłączeniem openNaturalSearch: ***/
 "   #nav .nav li a:not(#openNaturalSearch):hover, #nav .nav li.active a {" +
 "       background-color: transparent !important;" + 
+"		border-color: transparent !important;" +
 "       color: " + navfocus_un +
+"		opacity: 1 !important;" +
 "   }" + 
 "" +
 // /*** Zmiana koloru wszystkich ikonek SVG na jasnoniebieskie, po najechaniu na nie: ***/
@@ -82,6 +89,7 @@ var style = ["<style>" +
 /*** Zmiana pozycji przycisków, które są PO przycisku przekierowującym na główną stronę portalu: ***/
 "   .mainnav li:nth-child(2) {" + 
 "       width: 100% !important;" + 
+"		margin-left: 7px !important;" +
 "   }" + 
 "" + 
 /*** Przycisk od wyszukiwania i zabawy z nim: ***/
@@ -89,7 +97,7 @@ var style = ["<style>" +
 "       color: " + black +
 "       bottom: 50px;" + 
 "       position: absolute;" + 
-"       right: 25px !important;" + 
+"       right: 18px !important;" + 
 "   }" + 
 "" + 
 /*** Zmiana szerokości pola od wyszukiwarki: ***/
@@ -102,6 +110,11 @@ var style = ["<style>" +
 "   #nav .nav li a:hover, .clearfix a:hover svg * { " +
 "      fill: " + nav_focus +
 "}" +
+/*** Usuwanie belki wywołującej skalowanie na niezalogowanym: ***/
+"	.rbl-block.overflow.m-reset-width.force-scalable.m-hide {" +
+"		padding: 0px !important;" +
+"	}" +
+"" +
 "   ul:not(.mainnav).clearfix > li {" + 
 "       height: auto;" + 
 "   }" + 
@@ -109,6 +122,19 @@ var style = ["<style>" +
 /*** Przeniesienie Wykopowych "doodli" o 50 pikseli w dół: ***/
 "	.doodle {" +
 "		margin-top: 50px !important;" +
+"	}" +
+"" +
+/*** Przestawienie loga oraz przycisku "Szukaj" zarówno dla zalogowanego, jak i niezalogowanego: ***/
+"	ul.clearfix > li.login {" +
+"		margin-right: -12px !important;" +
+"	}" +
+"" +
+"	ul.clearfix > li.logged-user {" +
+"		margin-right: -2px !important;" +
+"	}" +
+"" +
+"	ul.clearfix {" +
+"		margin-right: 13px !important;" +
 "	}" +
 "" +
 "   .nav ul:not(.mainnav).clearfix {" + 
@@ -169,6 +195,7 @@ var style = ["<style>" +
 // "" +
 "   i.wykop-logo, i.microblog-logo {" + 
 "       background-image: url('" + logo_normal + "') !important;" + 
+"		margin-left: -11px !important;" +
 "   }" + 
 "" + 
 "   i.wykop-logo:hover, i.microblog-logo:hover {" + 
@@ -213,4 +240,4 @@ var style = ["<style>" +
 "	}" +
 "" +
 "</style>"].join("\n");
-document.head.insertAdjacentHTML("beforeend", style);
+document.head.insertAdjacentHTML("beforeend", style)
