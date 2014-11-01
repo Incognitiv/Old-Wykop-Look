@@ -88,13 +88,13 @@ var style = ["<style>" +
 "       color: " + black +
 "       bottom: 50px;" + 
 "       position: absolute;" + 
-"       right: 0 !important;" + 
+"       right: 5px !important;" + 
 "   }" + 
 "" + 
 /*** Zmiana szerokości pola od wyszukiwarki: ***/
 "   input[name='nsQ'] {" + 
 "       position: absolute;" + 
-"       width: 134% !important;" + 
+"       width: 133% !important;" + 
 "   }" + 
 "" + 
 /*** Zmiana koloru mojego dodatku: ***/
@@ -139,7 +139,7 @@ var style = ["<style>" +
 "" + 
 "   .diggbox span:first-child {" + 
 "       background: url('" + digg_button + "') no-repeat scroll 0 0 rgba(0, 0, 0, 0);" + 
-"       color: #3b708a;" + 
+"       color: #3B708A;" + 
 "   }" + 
 "" + 
 "   em.mark-number {" +
