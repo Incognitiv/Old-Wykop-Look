@@ -2,7 +2,7 @@
 // @name            Old Look Wykop
 // @description     Skrypt przywraca stary wygląd portalu Wykop.pl z lat 2007-2008.
 // @author          Patryk "Linux__Shines" N.
-// @version         0.0.0.5
+// @version         0.0.0.7
 // @include         http://www.wykop.pl/*
 // @include         https://www.wykop.pl/*
 // @updateURL       https://openuserjs.org/install/The_Shiny/Wykop_-_Fullscreen_Mikro.user.js
