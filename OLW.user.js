@@ -28,12 +28,15 @@ var teal        = "#CFE0E8 !important;";
 var darkteal    = "#A2C4D4 !important;";
 var nav_focus   = "#DEEBF1 !important;";
 var navfocus_un = "#DEEBF1;";
+var blue_link_h	= "#4B6A7C !important;";
+var black_text	= "#333333 !important;";
+var diggbox_blu	= "#3B708A !important;";
 
 /*** Obrazki: ***/
 var background  = "http://i.imgur.com/Y9zPxy7.png";
 var logo_normal = "http://i.imgur.com/Tyinjgx.png";
 var logo_hover  = "http://i.imgur.com/RhpC99v.png";
-var digg_button = "http://i.imgur.com/L6avdgg.png";
+var digg_button = "http://i.imgur.com/exsoZ0K.png";
 
 /*** Styl: ***/
 var style = ["<style>" +
@@ -66,6 +69,11 @@ var style = ["<style>" +
 // "       color: " + navfocus_un +
 // "   }" +
 // "" +
+/*** Przeniesienie ikonki płomyka: ***/
+"	.diggbox .hot {" +
+"		right: -14px !important;" +
+"	}" +
+"" +
 /*** Wymuszenie przeniesienia marginesu o 50 pikseli do góry: ***/
 "   .clearfix.m-reset-position {" + 
 "       margin-top: -50px !important;" + 
@@ -132,6 +140,20 @@ var style = ["<style>" +
 "		margin-right: 13px !important;" +
 "	}" +
 "" +
+/*** Zmiana koloru czcionki linków na głównej: ***/
+"	.m-reset-margin h2 > a {" +
+"		color: " + orange +
+"	}" +
+"" +
+"	.m-reset-margin h2 > a:hover {" +
+"		color: " + blue_link_h +
+"	}" +
+"" +
+/*** Zmiana koloru czcionki tekstu linku na głównej: ***/
+"	.description p.text a {" +
+"		color: " + black_text +
+"	}" +
+"" +
 "   .nav ul:not(.mainnav).clearfix {" + 
 "       display: inline-flex;" + 
 "       height: 100%;" + 
@@ -161,9 +183,49 @@ var style = ["<style>" +
 "" + 
 "   .diggbox span:first-child {" + 
 "       background: url('" + digg_button + "') no-repeat scroll 0 0 rgba(0, 0, 0, 0);" + 
-"       color: #3B708A;" + 
+"       color: " + diggbox_blu +
+"		height: 53px !important;" +
+"		width: 59px !important;" +
+"		margin-top: -3px !important;" +
+"		margin-left: 4px !important;" +
 "   }" + 
+"" +
+"   .diggbox span:first-child:hover {" + 
+"       background: url('" + digg_button + "') no-repeat scroll 0 0 rgba(0, 0, 0, 0);" + 
+"       color: " + orange +
+"   }" + 
+"	.diggbox.digout span:first-child { " +
+"		background-position: 0 -53px !important;" +
+"		color: " + orange +
+"		margin-top: -3px !important;" +
+"	}"+
 "" + 
+"	.diggbox.digout.burried span:first-child {" +
+"		background-position: 0 -53px !important;" +
+"		margin-left: 4px !important;" +
+"	}" +
+"" +
+"	.article.preview .media-content img {" +
+"		margin-left: 18px !important;" +
+"		margin-right: 19px !important;" +
+"	}"+
+"" +
+// "	.lcontrast.m-reset-float.m-reset-margin {" +
+// "		margin-left: 15px !important;" +
+// "	}" +
+// "" +
+/*** Usunięcie tła z przycisku "wykop": ***/
+"	.diggbox span.button.submit, .diggbox span.button.submit:hover {" +
+"		background-color: initial !important;" +
+"		border: medium none rgba(0, 0, 0, 0) !important;" +
+"		color: " + orange +
+"		margin-left: 8px !important;" +
+"	}" +
+"" +
+"	.dropdown-show > span {" +
+"		margin-left: 9px !important;" +
+"	}" +
+"" +
 "   em.mark-number {" +
 "       color: " + white + 
 "   }" + 
@@ -173,10 +235,6 @@ var style = ["<style>" +
 "   }" + 
 "" +
 "   .clearfix.mainnav > li "+
-"       color: " + orange + 
-"   }" + 
-"" +
-"   .diggbox span:first-child"+
 "       color: " + orange + 
 "   }" + 
 "" +
@@ -234,5 +292,45 @@ var style = ["<style>" +
 "		border: 1px solid transparent !important;" +
 "	}" +
 "" +
+/*** Usunięcie obramowania tagów wokół linku: ***/
+"	div.lcontrast > div.fix-tagline > span.tag, div.lcontrast > div.fix-tagline > span.tag a, div.lcontrast > div.fix-tagline > span.tag:hover, div.lcontrast > div.fix-tagline > span.tag a:hover {" +
+"		background-color: initial !important;" +
+"		border: 0 none !important;" +
+"		box-shadow: none;" +
+"		color: " + lightblue +
+"}" +
+""+
+"	div.lcontrast > div.fix-tagline > span.tag a:before {" +
+"		content: '(' !important;" +
+"		color: " + lightblue +
+"}" +
+"" +
+"	div.lcontrast > div.fix-tagline > span.tag a:after {" +
+"		content: ')' !important;" +
+"		color: " + lightblue +
+"}" +
+/*** Przycisk 'cofnij zakop': ***/
+"	.diggbox.digout a span.button {" +
+"		background-color: initial !important;" +
+"		border: medium none rgba(0, 0, 0, 0) !important;" +
+"		margin-left: 8px !important;" +
+"	}" +
+"" +
+/*** TEST: ***/
+"	.lcontrast.m-reset-margin * + .article.preview .media-content img {" +
+"		margin-left: 10px !important;" +
+"	}" +
+"" +
+
+/*** Zmiana rozmiaru marginesu obok obrazka w znalezisku: ***/
+"	.media-content img {" +
+"		margin-left: 23px !important;" +
+"		margin-top: -24px; !important" +
+"}" +
+"" +
+"	.media-content.no-description {" +
+"		margin-left: -5px;" +
+"}" +
+"" +
 "</style>"].join("\n");
-document.head.insertAdjacentHTML("beforeend", style)
+document.head.insertAdjacentHTML("beforeend", style);
