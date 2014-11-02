@@ -208,6 +208,8 @@ var style = ["<style>" +
 "	.article.preview .media-content img {" +
 "		margin-left: 18px !important;" +
 "		margin-right: 19px !important;" +
+"		margin-bottom: 3px !important;" +
+"		margin-top: -2px !important;" +
 "	}"+
 "" +
 // "	.lcontrast.m-reset-float.m-reset-margin {" +
@@ -330,6 +332,24 @@ var style = ["<style>" +
 "" +
 "	.media-content.no-description {" +
 "		margin-left: -5px;" +
+"}" +
+"" +
+/*** Zmiana pozycji nagłówka w streamie: ***/
+"	ul#itemsStream.comments-stream .small > .lcontrast.m-reset-margin {" +
+"		margin-left: 20px !important;" +
+"	}" +
+"" +
+/*** Zmiana pozycji napisu 'zakop' w Wykopalisku: ***/
+"	.preview .diggbox > a.dropdown-show {" +
+"		margin-left: 9px !important;" +
+"	}"+
+/*** Modyfikowanie linków sponsorowanych: ***/
+"	#dyingLinksBox h2, #dyingLinksBox p.text.small {" +
+"		margin-left: 20px !important;" +
+"	}" +
+"" +
+"	#dyingLinksBox .diggbox span {" +
+"		margin-top: -6.5px !important;" +
 "}" +
 "" +
 "</style>"].join("\n");
